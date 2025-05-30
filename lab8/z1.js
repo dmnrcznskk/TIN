@@ -98,6 +98,26 @@ const tablica = [
 ];
                
 function generujTabeleZAut(tablica) {
+  const div_z_tabela = document.getElementById("tabela-aut");
+  const tabela = document.createElement('table');
+  const header = document.createElement('tr');
+  ["Rok", "Przebieg", "Cena wyjsciowa", "Cena koncowa"].forEach(e => {
+    const th = document.createElement('th');
+    th.textContent = e;
+    header.appendChild(th);
+  })
+  tabela.appendChild(header);
+  div_z_tabela.appendChild(tabela);
 
+  tablica.forEach(e => {
+    const tr = document.createElement('tr');
+    [e.rok, e.przebieg, e.cena_wyjsciowa, e.cena_koncowa].forEach(p => {
+      const td = document.createElement('td');
+      td.textContent = p;
+      tr.appendChild(td);
+    })
+    tabela.appendChild(tr);
+  })
+  div_z_tabela.appendChild(tabela);
 }
 generujTabeleZAut(tablica);

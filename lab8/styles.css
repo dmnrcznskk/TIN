@@ -1,0 +1,58 @@
+#tabela-aut table th, tr {
+    padding: 10px;
+    text-align: center;
+}
+
+#tabela-aut table {
+    border-collapse: collapse;
+}
+
+#tabela-aut table th, td {
+    border: 1px solid black;
+}
+
+#tabela-aut th {
+    font-weight: bold;
+}
+
+#tabela-aut table tr:nth-child(odd) {
+    background-color: #9EBC8A;
+}
+
+#tabela-aut table tr:nth-child(even) {
+    background-color: #D2D0A0;
+}
+
+#lista-studentow {
+    max-width: 500px;
+  }
+  
+  #lista-studentow > div {
+    background-color: #9EBC8A;
+    padding: 6px 12px;
+    margin-bottom: 6px;
+    border: 1px solid #000;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  #lista-studentow ul {
+    list-style-type: none;
+    margin: 6px 0 6px 20px;
+    padding: 0;
+  }
+  
+  #lista-studentow li {
+    background-color: #D2D0A0;
+    margin-bottom: 4px;
+    padding: 4px 8px;
+    border: 1px solid #999;
+    font-size: 14px;
+  }
+  
+  #lista-studentow p {
+    margin: 4px 0 10px 20px;
+    font-size: 14px;
+    font-style: italic;
+    color: #333;
+  }

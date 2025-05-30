@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+body {
+    background-color: #EEEEEE;
+}
+
+nav {
+    height: 100px;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0 20px;
+}
+
+.right__nav {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+}
+
+nav img {
+    width: 80px;
+    height: 80px;
+}
+
+nav a {
+    font-size: 2rem;   
+    color: #E3001C;
+    text-decoration: none;
+}
+
+.right__nav span:not(:last-child) {
+    border-right: 1px solid gray;
+    padding-right: 20px;
+}
+
+.main__site {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.main__site section {
+    width: 30%;
+    min-width: 300px;
+}
+
+.image__section img {
+    width: 48%;
+    padding: 1%;
+    height: auto;
+}
+
+footer {
+    width: 100vw;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2.5rem;
+    background: none;
+    border: none;
+    color: #E3001C;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1000px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .hamburger {
+        display: block;
+        align-self: flex-end;
+    }
+
+    .right__nav {
+        display: none;
+    }
+
+    .right__nav.active {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .right__nav span:not(:last-child) {
+        border-right: none;
+        padding: 0;
+    }
+
+    .right__nav span {
+        border-bottom: 1px solid gray;
+        width: 100vw;
+    }
+
+    .main__site {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main__site section {
+        width: 90%;
+        text-align: center;
+    }
+
+    .image__section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image__section img {
+        width: 90%;
+    }
+
+    .main__site section:not(:first-child) {
+        margin-top: 20px;
+    }
+}
